@@ -1,9 +1,13 @@
+import AddQuestionForm from "../components/AddQuestionForm";
 import { useAuth } from "../context/AuthContext";
+import '../styles/Home.css';
 
 const Home = () =>{
     
     return(
-        <p>Home Page</p>
+        <div className="home-main-container">
+            <AddQuestionForm/>
+        </div>
     );
 }
 

@@ -22,4 +22,4 @@ const firebaseConfig = {
 
 const myApp = firebase.initializeApp(firebaseConfig);
 export const auth = myApp.auth();
-export const firebaseReference = myApp.database();
+export const DatabaseReference = myApp.database();

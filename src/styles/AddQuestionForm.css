@@ -1,0 +1,10 @@
+.add-question-form input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background-color: #fcf8f8;
+    box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
+    font-size: 18px;
+}
