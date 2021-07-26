@@ -1,0 +1,57 @@
+.navbar-parent-list{
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
+
+}
+
+.navbar-left-list{
+    float:left;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar-logo{
+    height: 35px;
+    width: 35px;
+}
+
+.navbar-search{
+    padding: 10px;
+    border-radius: 5px;
+    width: 200px;
+    outline: none;
+    border: 1px solid #999;
+
+}
+
+.navbar-left-list li{
+    padding: 5px;
+    margin: 5px 5px 0px 5px;
+    cursor: pointer;
+
+}
+
+.navbar-right-list li{
+    padding: 5px;
+    margin: 14px 5px 0px 5px;
+    cursor: pointer;
+}
+
+
+
+.navbar-right-list{
+    float:right;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    margin: 0 10% 0 0;
+}
+
+.navbar-right-list li:active{
+    color: red;
+}
