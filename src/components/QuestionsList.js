@@ -1,16 +1,32 @@
 import { Fragment } from "react";
-import Question from "./question";
+import { useEffect, useState } from "react";
+import { DatabaseReference } from "../config/firebase";
+import Question from "./Question";
+
 
 const QuestionsList = ()=>{
+    const db = DatabaseReference.ref('questions');
+
+    const [questionList,setQuestionList] = useState([]);
+
+
+    useEffect(()=>{
+        db.on('value',(snapshot)=>{
+            let questions = snapshot.val();
+            let list = questions && Object.keys(questions).map(idx=>questions[idx]);
+            console.log(list);
+            setQuestionList(list);
+        })
+    },[]);
+
+
+
     return(
         <Fragment>
-        <Question/>
-        <Question/>
-        <Question/>
-        <Question/>
-        <Question/>
-        <Question/>
-        <Question/>
+            {questionList?.map((question)=>{
+                console.log(question);
+                return <Question key={question.id} question={question}/>
+            })}
         </Fragment>
     );    
 }

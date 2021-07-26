@@ -13,12 +13,16 @@ const AddQuestionForm = ()=>{
     const addQuestionHandler = (e) =>{
         e.preventDefault();
         const key = Date.now();
-        const question = {question:questionRef.current.value};
-        db.child(key).push(question)
+        const question = {
+            question:questionRef.current.value,
+            user:currentUser.uid,
+            id:key
+        };
+        db.child(key).set(question)
             .then(()=>{
                 console.log("Created new Item Successfully!");
             })
-            db2.child(key).push(question)
+            db2.child(key).set(question)
             .then(()=>{
                 console.log("Created new Item Successfully!");
             })    
